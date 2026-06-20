@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+</head>
+<body>
+
+    <h1>CV Analysis Result</h1>
+
+    <h2>Profile Score: {{ score }}%</h2>
+
+    <h3>Skills Found</h3>
+    <ul>
+        {% for skill in found %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Missing Skills</h3>
+    <ul>
+        {% for skill in missing %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Recommendations</h3>
+    <ul>
+        {% for skill in missing %}
+            <li>Learn {{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
